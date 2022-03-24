@@ -3,6 +3,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .arrow{
+      height: 50px;
+      position: absolute;
+      cursor: pointer;
+
+      &.left{
+          left: 100px;
+          transform: rotateY(180deg);
+      }
+
+      &.right {
+          right: 100px;
+      }
+  }
 
   .slider {
     height: 350px;
@@ -50,26 +66,34 @@
                 width: 25px;
               }
             }
-            h2{
-                font-size: 20px;
-
+            h2 {
+              font-size: 20px;
             }
 
-            p{
-                font-size: 13px;
+            p {
+              font-size: 13px;
             }
 
-            span{
-                font-style: 12px;
-                font-weight: 600;
-                text-decoration: underline;
-                cursor: pointer;
+            span {
+              font-style: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
             }
           }
         }
         .right {
           flex: 8;
           height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          img{
+              width: 400px;
+              transform: rotate(-10deg);
+          }
         }
       }
     }
